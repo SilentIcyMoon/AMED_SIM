@@ -46,7 +46,7 @@ function start_experiment() {
     var method_paths = [];
     // read filepath
         method_paths.push(wav_dir + "/target.list");
-        method_paths.push(wav_dir + "/conveted.list");
+        method_paths.push(wav_dir + "/converted.list");
     console.log(method_paths);
     file_list = makeFileList(method_paths);
     console.log(file_list);
