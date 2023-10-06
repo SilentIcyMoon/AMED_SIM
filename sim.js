@@ -83,27 +83,16 @@ function makeFileList(method_list_path) {
         method.push(loadText(method_list_path[i]));
         // method.push(loadText(method_list_path[i]).shuffle());
     }
-    // var set_num = "0"
-    // var number = document.getElementsByName("set");
-    // for (var i = 0; i < number.length; i++) {
-    //     if (number[i].checked) {
-    //         set_num = number[i].value;
-    //     }
-    // }
-    // if (set_num == "0") {
-    //     alert("Please press the setlist number button.");
-    //     return false;
-    // }
     var files = Array();
     for (var i = 0; i < method[0].length; i++) {
-            pairs = [
-                [method[0][i], method[1][i]],
-                [method[1][i], method[0][i]],
-            ]
-    for (var j = 0; j < pairs.length; j++) {
+        pairs = [
+            [method[0][i], method[1][i]],
+            [method[1][i], method[0][i]],
+        ]
+    	for (var j = 0; j < pairs.length; j++) {
             files.push(pairs[j]);
-	    }
 	}
+    }
     files.shuffle();
     return files;
 }		 
